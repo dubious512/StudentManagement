@@ -40,10 +40,10 @@
             this.dataSet2 = new StudentManagement.DataSet.DataSet2();
             this.View_DetailStudentByDepartmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet3 = new StudentManagement.DataSet.DataSet3();
-            this.studentGradesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet4 = new StudentManagement.DataSet.DataSet4();
             this.viewDetailStudentByClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet5 = new StudentManagement.DataSet.DataSet5();
+            this.studentGradesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet4 = new StudentManagement.DataSet.DataSet4();
             this.viewStudentsByDepartmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -69,10 +69,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_DetailStudentByDepartmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentGradesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDetailStudentByClassBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentGradesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewStudentsByDepartmentBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -114,16 +114,6 @@
             this.dataSet3.DataSetName = "DataSet3";
             this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // studentGradesBindingSource
-            // 
-            this.studentGradesBindingSource.DataMember = "StudentGrades";
-            this.studentGradesBindingSource.DataSource = this.dataSet4;
-            // 
-            // dataSet4
-            // 
-            this.dataSet4.DataSetName = "DataSet4";
-            this.dataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // viewDetailStudentByClassBindingSource
             // 
             this.viewDetailStudentByClassBindingSource.DataMember = "View_DetailStudentByClass";
@@ -133,6 +123,16 @@
             // 
             this.dataSet5.DataSetName = "DataSet5";
             this.dataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentGradesBindingSource
+            // 
+            this.studentGradesBindingSource.DataMember = "StudentGrades";
+            this.studentGradesBindingSource.DataSource = this.dataSet4;
+            // 
+            // dataSet4
+            // 
+            this.dataSet4.DataSetName = "DataSet4";
+            this.dataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // viewStudentsByDepartmentBindingSource
             // 
@@ -160,7 +160,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(718, 277);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Sinh viên mỗi khoa";
+            this.tabPage1.Text = "Số lượng sinh viên mỗi Khoa";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // reportViewer1
@@ -183,7 +183,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(718, 277);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Sinh viên mỗi lớp";
+            this.tabPage2.Text = "Số lượng sinh viên mỗi lớp";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // reportViewer2
@@ -206,7 +206,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(718, 277);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Sinh viên của từng khoa";
+            this.tabPage3.Text = "Sinh viên mỗi Khoa";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // reportViewer3
@@ -229,7 +229,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(718, 277);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Sinh viên theo môn học";
+            this.tabPage4.Text = "Sinh viên mỗi lớp";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // reportViewer5
@@ -252,7 +252,7 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(718, 277);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Điểm sinh viên";
+            this.tabPage5.Text = "Điểm tổng hợp";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // reportViewer4
@@ -314,10 +314,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_DetailStudentByDepartmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentGradesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDetailStudentByClassBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentGradesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewStudentsByDepartmentBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

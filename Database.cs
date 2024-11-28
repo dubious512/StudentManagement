@@ -62,7 +62,7 @@ namespace StudentManagement
                 datatable.Load(cmd.ExecuteReader());
                 return datatable.Rows[0];
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
                 MessageBox.Show("Lỗi tải thông tin chi tiết");
                 return null;
@@ -86,7 +86,7 @@ namespace StudentManagement
                 var rs = cmd.ExecuteNonQuery();
                 return (int)rs;
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
                 //MessageBox.Show("Lỗi thực thi câu lệnh :" + ex.Message);
                 return -100;

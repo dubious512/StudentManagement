@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnDerpartment = new System.Windows.Forms.Button();
-            this.btnCourse = new System.Windows.Forms.Button();
-            this.btnEnrollment = new System.Windows.Forms.Button();
-            this.btnStudent = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
+            this.btnStudent = new System.Windows.Forms.Button();
+            this.btnEnrollment = new System.Windows.Forms.Button();
+            this.btnCourse = new System.Windows.Forms.Button();
+            this.btnDerpartment = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -41,7 +41,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.btnReport);
             this.groupBox1.Controls.Add(this.btnStudent);
             this.groupBox1.Controls.Add(this.btnEnrollment);
@@ -53,43 +53,19 @@
             this.groupBox1.Size = new System.Drawing.Size(105, 371);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "System";
+            this.groupBox1.Text = "Hệ Thống";
             // 
-            // btnDerpartment
+            // btnReport
             // 
-            this.btnDerpartment.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDerpartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDerpartment.Location = new System.Drawing.Point(13, 24);
-            this.btnDerpartment.Name = "btnDerpartment";
-            this.btnDerpartment.Size = new System.Drawing.Size(86, 50);
-            this.btnDerpartment.TabIndex = 0;
-            this.btnDerpartment.Text = "Khoa";
-            this.btnDerpartment.UseVisualStyleBackColor = false;
-            this.btnDerpartment.Click += new System.EventHandler(this.btnDerpartment_Click);
-            // 
-            // btnCourse
-            // 
-            this.btnCourse.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCourse.Location = new System.Drawing.Point(12, 93);
-            this.btnCourse.Name = "btnCourse";
-            this.btnCourse.Size = new System.Drawing.Size(86, 50);
-            this.btnCourse.TabIndex = 1;
-            this.btnCourse.Text = "Môn học";
-            this.btnCourse.UseVisualStyleBackColor = false;
-            this.btnCourse.Click += new System.EventHandler(this.btnCourse_Click);
-            // 
-            // btnEnrollment
-            // 
-            this.btnEnrollment.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnEnrollment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnrollment.Location = new System.Drawing.Point(11, 160);
-            this.btnEnrollment.Name = "btnEnrollment";
-            this.btnEnrollment.Size = new System.Drawing.Size(86, 50);
-            this.btnEnrollment.TabIndex = 2;
-            this.btnEnrollment.Text = "Điểm";
-            this.btnEnrollment.UseVisualStyleBackColor = false;
-            this.btnEnrollment.Click += new System.EventHandler(this.btnEnrollment_Click);
+            this.btnReport.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Location = new System.Drawing.Point(11, 295);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(86, 50);
+            this.btnReport.TabIndex = 4;
+            this.btnReport.Text = "Báo cáo";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnStudent
             // 
@@ -103,17 +79,41 @@
             this.btnStudent.UseVisualStyleBackColor = false;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
-            // btnReport
+            // btnEnrollment
             // 
-            this.btnReport.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Location = new System.Drawing.Point(11, 295);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(86, 50);
-            this.btnReport.TabIndex = 4;
-            this.btnReport.Text = "Báo cáo";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            this.btnEnrollment.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEnrollment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnrollment.Location = new System.Drawing.Point(11, 160);
+            this.btnEnrollment.Name = "btnEnrollment";
+            this.btnEnrollment.Size = new System.Drawing.Size(86, 50);
+            this.btnEnrollment.TabIndex = 2;
+            this.btnEnrollment.Text = "Điểm";
+            this.btnEnrollment.UseVisualStyleBackColor = false;
+            this.btnEnrollment.Click += new System.EventHandler(this.btnEnrollment_Click);
+            // 
+            // btnCourse
+            // 
+            this.btnCourse.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCourse.Location = new System.Drawing.Point(12, 93);
+            this.btnCourse.Name = "btnCourse";
+            this.btnCourse.Size = new System.Drawing.Size(86, 50);
+            this.btnCourse.TabIndex = 1;
+            this.btnCourse.Text = "Môn học";
+            this.btnCourse.UseVisualStyleBackColor = false;
+            this.btnCourse.Click += new System.EventHandler(this.btnCourse_Click);
+            // 
+            // btnDerpartment
+            // 
+            this.btnDerpartment.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDerpartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDerpartment.Location = new System.Drawing.Point(13, 24);
+            this.btnDerpartment.Name = "btnDerpartment";
+            this.btnDerpartment.Size = new System.Drawing.Size(86, 50);
+            this.btnDerpartment.TabIndex = 0;
+            this.btnDerpartment.Text = "Khoa";
+            this.btnDerpartment.UseVisualStyleBackColor = false;
+            this.btnDerpartment.Click += new System.EventHandler(this.btnDerpartment_Click);
             // 
             // pictureBox1
             // 

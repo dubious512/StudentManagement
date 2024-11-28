@@ -112,13 +112,21 @@ namespace StudentManagement
             {
                 key = "@Gender",
                 value = gender
-            });           
-            lstPara.Add(new CustomParameter()
+            });
+            if (string.IsNullOrWhiteSpace(departmentID))
             {
-                 key = "@DepartmentID",
-                 value = departmentID
-             });
-            
+                MessageBox.Show("Mã không hợp lệ, vui lòng nhập lại.");
+                txtDepartmentID.Select();
+                return;
+            }
+            else
+            {
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@DepartmentID",
+                    value = departmentID
+                });
+            }
             var rs = new Database().ExeCute(sql, lstPara);
 
             if (rs == 1)
@@ -135,7 +143,7 @@ namespace StudentManagement
             }
             else
             {
-                MessageBox.Show("Mã khoa không tồn tại hoặc không hợp lệ");
+                MessageBox.Show("Mã khoa không hợp lệ hoặc không tồn tại.Vui lòng nhập lại");
                 txtDepartmentID.Select();
             }
         }

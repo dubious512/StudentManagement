@@ -76,12 +76,22 @@ namespace StudentManagement
                     key = "@CourseID",
                     value = courseID
                 });
-                        
-            lstPara.Add(new CustomParameter()
+
+            int numericGrade;
+            if (!int.TryParse(grade, out numericGrade) || numericGrade < 0)
             {
-                key = "@Grade",
-                value = grade
-            });
+                MessageBox.Show("Điểm không hợp lệ. Vui lòng nhập lại.");
+                txtGrade.Select(); // Giả sử bạn có một trường nhập cho điểm
+                return; // Ngăn không cho tiếp tục nếu có lỗi
+            }
+            else
+            {
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@Grade",
+                    value = grade
+                });
+            }
 
             lstPara.Add(new CustomParameter()
             {

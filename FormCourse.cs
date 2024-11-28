@@ -43,60 +43,68 @@ namespace StudentManagement
 
             List<CustomParameter> lstPara = new List<CustomParameter>();
 
-            if (string.IsNullOrEmpty(courseID))
-            {
-                sql = "CreateCourse";
-
-            }
-            else
-            {
-                sql = "UpdateCourse";
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@CourseID",
-                    value = courseID
-                });
-            }
-            if (string.IsNullOrWhiteSpace(courseName))
-            {
-                // Ném ra ngoại lệ với thông báo lỗi
-                MessageBox.Show("Tên không hợp lệ, vui lòng nhập lại.");
-                txtCourseName.Select();
-            }
-            else
-            {
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@CourseName",
-                    value = courseName
-                });
-            }
-            lstPara.Add(new CustomParameter()
-            {
-                key = "@DepartmentID",
-                value = departmentID
-            });
-            var rs = new Database().ExeCute(sql, lstPara);
-
-            if (rs == 1)
-            {
                 if (string.IsNullOrEmpty(courseID))
                 {
-                    MessageBox.Show("Thêm mới môn học thành công");
+                    sql = "CreateCourse";
+
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật thông tin môn học thành công");
+                    sql = "UpdateCourse";
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@CourseID",
+                        value = courseID
+                    });
                 }
-                this.Dispose();
-            }
-            else
-            {
-                MessageBox.Show("Mã khoa không hợp lệ hoặc không tồn tại.Vui lòng nhập lại");
-                txtDepartmentID.Select();
-            }
+                if (string.IsNullOrWhiteSpace(courseName))
+                {
+                    // Ném ra ngoại lệ với thông báo lỗi
+                    MessageBox.Show("Tên không hợp lệ, vui lòng nhập lại.");
+                    txtCourseName.Select();
+                return;
+                }
+                else
+                {
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@CourseName",
+                        value = courseName
+                    });
+                }
+                if (string.IsNullOrWhiteSpace(departmentID))
+                {
+                    MessageBox.Show("Mã không hợp lệ, vui lòng nhập lại.");
+                    txtDepartmentID.Select();
+                return;
+                }
+                else
+                {
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@DepartmentID",
+                        value = departmentID
+                    });
+                }            
+                var rs = new Database().ExeCute(sql, lstPara);
+                if (rs == 1)
+                {
+                    if (string.IsNullOrEmpty(courseID))
+                    {
+                        MessageBox.Show("Thêm mới môn học thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thông tin môn học thành công");
+                    }
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Mã khoa không hợp lệ hoặc không tồn tại.Vui lòng nhập lại");
+                    txtDepartmentID.Select();
+                }      
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

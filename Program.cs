@@ -21,10 +21,10 @@ namespace StudentManagement
             Login loginForm = new Login(mainForm);
 
             // Chỉ hiển thị form đăng nhập khi chương trình khởi chạy
-            loginForm.Show();
-            mainForm.Hide();
+            //loginForm.Show();
+            //mainForm.Hide();
 
-            Application.Run(loginForm);
+            Application.Run(new EnrollmentManage());
         }
     }
 }
